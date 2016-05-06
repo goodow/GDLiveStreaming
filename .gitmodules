@@ -1,0 +1,3 @@
+[submodule "VideoCore"]
+	path = VideoCore
+	url = https://github.com/goodow/VideoCore.git
