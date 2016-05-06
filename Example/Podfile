@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GDLiveStreaming_Example', :exclusive => true do
+  pod 'GDLiveStreaming', :path => '../'
+end
+
+target 'GDLiveStreaming_Tests', :exclusive => true do
+  pod 'GDLiveStreaming', :path => '../'
+
+  
+end
