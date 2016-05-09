@@ -14,6 +14,7 @@
 #import "GDLViewController.h"
 #import "GDLRawDataOutput.h"
 #import "GPUImageMovieWriter.h"
+#import "GPUImageBeautifyFilter.h"
 #import <AssetsLibrary/ALAssetsLibrary.h>
 
 @interface GDLViewController ()
@@ -23,6 +24,7 @@
 @implementation GDLViewController {
   GDLRawDataOutput *_output;
   GPUImageVideoCamera *_videoCamera;
+  GPUImageBeautifyFilter *_filter;
 }
 
 - (void)viewDidLoad {
@@ -33,21 +35,25 @@
   _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
   _videoCamera.frameRate = 20;
 
+  //添加美颜滤镜
+  _filter = [[GPUImageBeautifyFilter alloc] init];
+  [_videoCamera addTarget:_filter];
+    
   CGSize viewSize = self.view.frame.size;
   GPUImageView *filteredVideoView = [[GPUImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, viewSize.width, viewSize.height)];
   [self.view addSubview:filteredVideoView];
 
-  [_videoCamera addTarget:filteredVideoView];
+  [_filter addTarget:filteredVideoView];
   CGSize size = CGSizeMake(720, 1280);
   _output = [[GDLRawDataOutput alloc] initWithVideoCamera:_videoCamera withImageSize:size];
-  [_videoCamera addTarget:_output];
+  [_filter addTarget:_output];
 
   NSString *pathToMovie = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Movie.m4v"];
   unlink([pathToMovie UTF8String]); // If a file already exists, AVAssetWriter won't let you record new frames, so delete the old movie
   NSURL *movieURL = [NSURL fileURLWithPath:pathToMovie];
   GPUImageMovieWriter *movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:size];
   movieWriter.encodingLiveVideo = YES;
-  [_videoCamera addTarget:movieWriter];
+  [_filter addTarget:movieWriter];
 
   [_videoCamera startCameraCapture];
 

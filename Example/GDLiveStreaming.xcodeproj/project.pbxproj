@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27AF606F80AC75AD993D6ED6 /* libPods-GDLiveStreaming_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DACD57B59AAB2025B0F4BD13 /* libPods-GDLiveStreaming_Example.a */; };
+		300DAF2C1CE083E600AB5E9B /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 300DAF2B1CE083E600AB5E9B /* GPUImageBeautifyFilter.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		06C8AC2040A10125E67F54DC /* Pods-GDLiveStreaming_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLiveStreaming_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDLiveStreaming_Tests/Pods-GDLiveStreaming_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C62093B6E6174A88CB1D146 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		300DAF2A1CE083E600AB5E9B /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
+		300DAF2B1CE083E600AB5E9B /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		3EE0BA6DE122642C05D558A7 /* libPods-GDLiveStreaming_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GDLiveStreaming_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* GDLiveStreaming_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDLiveStreaming_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +139,8 @@
 				6003F59C195388D20070C39A /* GDLAppDelegate.h */,
 				6003F59D195388D20070C39A /* GDLAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				300DAF2A1CE083E600AB5E9B /* GPUImageBeautifyFilter.h */,
+				300DAF2B1CE083E600AB5E9B /* GPUImageBeautifyFilter.m */,
 				6003F5A5195388D20070C39A /* GDLViewController.h */,
 				6003F5A6195388D20070C39A /* GDLViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -492,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* GDLAppDelegate.m in Sources */,
+				300DAF2C1CE083E600AB5E9B /* GPUImageBeautifyFilter.m in Sources */,
 				6003F5A7195388D20070C39A /* GDLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				61FBCB5B218F1755CF2E54A5 /* GDLRawDataOutput.mm in Sources */,
