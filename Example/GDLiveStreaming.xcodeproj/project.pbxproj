@@ -21,7 +21,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		61FBCB5B218F1755CF2E54A5 /* GDLRawDataOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61FBC4DA3654B56D9ECC815C /* GDLRawDataOutput.mm */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		D537675F4891E6DA3588394A /* libPods-GDLiveStreaming_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE0BA6DE122642C05D558A7 /* libPods-GDLiveStreaming_Tests.a */; };
 /* End PBXBuildFile section */
@@ -59,8 +58,6 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		61FBC4DA3654B56D9ECC815C /* GDLRawDataOutput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GDLRawDataOutput.mm; sourceTree = "<group>"; };
-		61FBCF66B0E471F21E5497E2 /* GDLRawDataOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDLRawDataOutput.h; sourceTree = "<group>"; };
 		62BBC973148F8EC0BF82D888 /* GDLiveStreaming.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GDLiveStreaming.podspec; path = ../GDLiveStreaming.podspec; sourceTree = "<group>"; };
 		7F227D185912B9C58B4956B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -140,8 +137,6 @@
 				6003F5A6195388D20070C39A /* GDLViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				61FBCF66B0E471F21E5497E2 /* GDLRawDataOutput.h */,
-				61FBC4DA3654B56D9ECC815C /* GDLRawDataOutput.mm */,
 			);
 			name = "Example for GDLiveStreaming";
 			path = GDLiveStreaming;
@@ -205,15 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "GDLiveStreaming_Example" */;
 			buildPhases = (
-				0C3BFDF6F5CCC9BBFE0DD580 /* uD83DuDCE6 Check Pods Manifest.lock */,
-				2DA2A02144B0F66929902678 /* uD83DuDCE6 Check Pods Manifest.lock */,
+				EDB20C74295148FA8C6BD2BC /* 📦 Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				F78C74A28D24D88C573DF959 /* uD83DuDCE6 Embed Pods Frameworks */,
-				735168B07918A4833AAA16AB /* uD83DuDCE6 Copy Pods Resources */,
-				8D1CD903FFF75FD92FE1CC71 /* uD83DuDCE6 Embed Pods Frameworks */,
-				19F309C96474AD693219C39E /* uD83DuDCE6 Copy Pods Resources */,
+				2410864071AE57993B5F2478 /* 📦 Embed Pods Frameworks */,
+				01C9A5ACD6C55CD1D32DABA4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "GDLiveStreaming_Tests" */;
 			buildPhases = (
+				C7E8CD76D05F93DBECEA4C23 /* 📦 Check Pods Manifest.lock */,
 				1E3DEAF3D2071B9E1F739A2A /* uD83DuDCE6 Check Pods Manifest.lock */,
 				8E49C6756BD41FD5D1B2D00C /* uD83DuDCE6 Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
@@ -237,6 +230,8 @@
 				34EC280F61CC790E1B7BF31F /* uD83DuDCE6 Copy Pods Resources */,
 				AD56384822C9D396E0A47B41 /* uD83DuDCE6 Embed Pods Frameworks */,
 				27DE2D392A020BAB21848541 /* uD83DuDCE6 Copy Pods Resources */,
+				571FC359F146F0ECCC63F584 /* 📦 Embed Pods Frameworks */,
+				49955AE2E21D59362435D6C9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,29 +299,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C3BFDF6F5CCC9BBFE0DD580 /* uD83DuDCE6 Check Pods Manifest.lock */ = {
+		01C9A5ACD6C55CD1D32DABA4 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "uD83DuDCE6 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		19F309C96474AD693219C39E /* uD83DuDCE6 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "uD83DuDCE6 Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +329,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		2410864071AE57993B5F2478 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Example/Pods-GDLiveStreaming_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		27DE2D392A020BAB21848541 /* uD83DuDCE6 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,21 +357,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Tests/Pods-GDLiveStreaming_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2DA2A02144B0F66929902678 /* uD83DuDCE6 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "uD83DuDCE6 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		34EC280F61CC790E1B7BF31F /* uD83DuDCE6 Copy Pods Resources */ = {
@@ -394,34 +374,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Tests/Pods-GDLiveStreaming_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		735168B07918A4833AAA16AB /* uD83DuDCE6 Copy Pods Resources */ = {
+		49955AE2E21D59362435D6C9 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "uD83DuDCE6 Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Example/Pods-GDLiveStreaming_Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Tests/Pods-GDLiveStreaming_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D1CD903FFF75FD92FE1CC71 /* uD83DuDCE6 Embed Pods Frameworks */ = {
+		571FC359F146F0ECCC63F584 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "uD83DuDCE6 Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Example/Pods-GDLiveStreaming_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Tests/Pods-GDLiveStreaming_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E49C6756BD41FD5D1B2D00C /* uD83DuDCE6 Check Pods Manifest.lock */ = {
@@ -469,19 +449,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Tests/Pods-GDLiveStreaming_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F78C74A28D24D88C573DF959 /* uD83DuDCE6 Embed Pods Frameworks */ = {
+		C7E8CD76D05F93DBECEA4C23 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "uD83DuDCE6 Embed Pods Frameworks";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLiveStreaming_Example/Pods-GDLiveStreaming_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDB20C74295148FA8C6BD2BC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -494,7 +489,6 @@
 				6003F59E195388D20070C39A /* GDLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* GDLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				61FBCB5B218F1755CF2E54A5 /* GDLRawDataOutput.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

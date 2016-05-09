@@ -21,7 +21,6 @@
 @end
 
 @implementation GDLViewController {
-  GDLRawDataOutput *_output;
   GPUImageVideoCamera *_videoCamera;
 }
 
@@ -39,8 +38,8 @@
 
   [_videoCamera addTarget:filteredVideoView];
   CGSize size = CGSizeMake(720, 1280);
-  _output = [[GDLRawDataOutput alloc] initWithVideoCamera:_videoCamera withImageSize:size];
-  [_videoCamera addTarget:_output];
+  GDLRawDataOutput *rawDataOutput = [[GDLRawDataOutput alloc] initWithVideoCamera:_videoCamera withImageSize:size];
+  [_videoCamera addTarget:rawDataOutput];
 
   NSString *pathToMovie = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Movie.m4v"];
   unlink([pathToMovie UTF8String]); // If a file already exists, AVAssetWriter won't let you record new frames, so delete the old movie
@@ -54,7 +53,7 @@
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
       _videoCamera.audioEncodingTarget = movieWriter;
       [movieWriter startRecording];
-      [_output startUploadStreamWithURL:@"rtmp://a.rtmp.youtube.com/live2" andStreamKey:@"323c-p07x-2g2e-c57k"];
+      [rawDataOutput startUploadStreamWithURL:@"rtmp://a.rtmp.youtube.com/live2" andStreamKey:@"323c-p07x-2g2e-c57k"];
 
       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 120.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
           [_videoCamera removeTarget:movieWriter];

@@ -22,7 +22,7 @@ using namespace videocore;
   self = [super initWithImageSize:size resultsInBGRAFormat:YES];
   if (self) {
     _videoCamera = camera;
-//        _videoCamera.audioEncodingTarget = (id) self;
+//    _videoCamera.audioEncodingTarget = (id) self;
 
     _session = [[VCSimpleSession alloc] initWithVideoSize:size frameRate:_videoCamera.frameRate bitrate:4000 * 1024];
     _session.useAdaptiveBitrate = YES;
@@ -80,7 +80,6 @@ using namespace videocore;
   if (!_upload) {
     return;
   }
-
 }
 
 - (BOOL)hasAudioTrack {

@@ -31,7 +31,8 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'GDLiveStreaming/Classes/**/*'
-  
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/boost" }
+
   # s.resource_bundles = {
   #   'GDLiveStreaming' => ['GDLiveStreaming/Assets/*.png']
   # }
