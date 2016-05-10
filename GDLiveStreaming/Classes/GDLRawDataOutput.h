@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import <GPUImage/GPUImageRawDataOutput.h>
 #import <GPUImage/GPUImageVideoCamera.h>
+#import "GDLStreamUploader.h"
 
 @class GPUImageVideoCamera;
 @protocol GPUImageAudioEncodingTarget
@@ -14,12 +15,8 @@
 - (void)processAudioBuffer:(CMSampleBufferRef)audioBuffer;
 @end
 
-@interface GDLRawDataOutput : GPUImageRawDataOutput <GPUImageVideoCameraDelegate, GPUImageAudioEncodingTarget>
+@interface GDLRawDataOutput : GPUImageRawDataOutput <GDLStreamUploader>
 
 - (instancetype)initWithVideoCamera:(GPUImageVideoCamera *)camera withImageSize:(CGSize)newImageSize;
-
-- (void)startUploadStreamWithURL:(NSString *)rtmpUrl andStreamKey:(NSString *)streamKey;
-
-- (void)stopUploadStream;
 
 @end

@@ -9,7 +9,7 @@
 
 using namespace videocore;
 
-@interface GDLRawDataOutput () <VCSessionDelegate>
+@interface GDLRawDataOutput () <VCSessionDelegate, GPUImageVideoCameraDelegate, GPUImageAudioEncodingTarget>
 @end
 
 @implementation GDLRawDataOutput {
