@@ -5,6 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/GDLiveStreaming.svg?style=flat)](http://cocoapods.org/pods/GDLiveStreaming)
 [![Platform](https://img.shields.io/cocoapods/p/GDLiveStreaming.svg?style=flat)](http://cocoapods.org/pods/GDLiveStreaming)
 
+## Features
+
+* Capturing and filtering live video via [GPUImage](https://github.com/BradLarson/GPUImage)
+* Focusing and Exposure on tap
+* H264 video encoding using VideoToolbox
+* Push stream through [RTMP](https://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
