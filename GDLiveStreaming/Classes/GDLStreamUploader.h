@@ -9,4 +9,7 @@
 
 - (void)stopUploadStream;
 
+@optional
+- (void)processAudioBuffer:(CMSampleBufferRef)audioBuffer;
+
 @end

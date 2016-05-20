@@ -8,7 +8,7 @@
 ## Features
 
 * Capturing and filtering live video via [GPUImage](https://github.com/BradLarson/GPUImage)
-* Focusing and Exposure on tap
+* Focusing and Exposure on tap: [GDLCameraUtil](https://github.com/goodow/GDLiveStreaming/blob/master/GDLiveStreaming/Classes/GDLCameraUtil.h)
 * H264 video encoding using VideoToolbox
 * Push stream through [RTMP](https://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol)
 
@@ -25,6 +25,8 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "GDLiveStreaming"
+pod 'VideoCore', :git => 'https://github.com/goodow/VideoCore.git'
+pod 'glm', :podspec => 'https://raw.githubusercontent.com/goodow/GDLiveStreaming/master/glm.podspec'
 ```
 
 ## Author
