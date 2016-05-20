@@ -1,6 +1,5 @@
 //
 // Created by Larry Tin on 15/12/28.
-// Copyright (c) 2015 Tencent. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

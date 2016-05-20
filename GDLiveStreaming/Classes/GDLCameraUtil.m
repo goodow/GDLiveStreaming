@@ -1,9 +1,5 @@
 //
-//  GDLCameraUtil.m
-//  Pods
-//
 //  Created by Larry Tin on 16/5/12.
-//
 //
 
 #import "GDLCameraUtil.h"
