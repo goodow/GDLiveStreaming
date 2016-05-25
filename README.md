@@ -9,6 +9,10 @@
 
 * Capturing and filtering live video via [GPUImage](https://github.com/BradLarson/GPUImage)
 * Focusing and Exposure on tap: [GDLCameraUtil](https://github.com/goodow/GDLiveStreaming/blob/master/GDLiveStreaming/Classes/GDLCameraUtil.h)
+* Pause and resume during recording: [GDLAlignVideoAudioTimestamp](https://github.com/goodow/GDLiveStreaming/blob/master/GDLiveStreaming/Classes/GDLAlignVideoAudioTimestamp.h)
+  * Rotate camera between front and rear
+  * Incoming call
+  * Alarm
 * H264 video encoding using VideoToolbox
 * Push stream through [RTMP](https://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol)
 
@@ -24,7 +28,7 @@ GDLiveStreaming is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "GDLiveStreaming"
+pod 'GDLiveStreaming', :git => 'https://github.com/goodow/GDLiveStreaming.git'
 pod 'VideoCore', :git => 'https://github.com/goodow/VideoCore.git'
 pod 'glm', :podspec => 'https://raw.githubusercontent.com/goodow/GDLiveStreaming/master/glm.podspec'
 ```
