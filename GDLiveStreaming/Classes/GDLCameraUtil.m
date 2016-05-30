@@ -3,7 +3,6 @@
 //
 
 #import "GDLCameraUtil.h"
-#import "GPUImage.h"
 #import "GDLResolutionUtil.h"
 
 @implementation GDLCameraUtil

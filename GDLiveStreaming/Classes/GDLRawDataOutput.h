@@ -3,11 +3,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GPUImage/GPUImageRawDataOutput.h>
-#import <GPUImage/GPUImageVideoCamera.h>
 #import "GDLStreamUploader.h"
+#import "GPUImageRawDataOutput.h"
+#import "GPUImageVideoCamera.h"
 
-@class GPUImageVideoCamera;
 @protocol GPUImageAudioEncodingTarget
 - (BOOL)hasAudioTrack;
 

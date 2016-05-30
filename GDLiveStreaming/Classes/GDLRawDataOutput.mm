@@ -2,7 +2,6 @@
 // Created by Larry Tin on 15/12/28.
 //
 
-#import <GPUImage/GPUImageMovieWriter.h>
 #import "GDLRawDataOutput.h"
 #import <videocore/api/iOS/VCSimpleSession.h>
 

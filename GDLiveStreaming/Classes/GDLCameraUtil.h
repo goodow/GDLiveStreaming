@@ -4,9 +4,8 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-
-@class GPUImageView;
-@class GPUImageVideoCamera;
+#import "GPUImageView.h"
+#import "GPUImageVideoCamera.h"
 
 @interface GDLCameraUtil : NSObject
 
