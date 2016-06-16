@@ -14,6 +14,9 @@
 #import "GDLViewController.h"
 #import "GDLRawDataOutput.h"
 #import "GPUImageMovieWriter.h"
+#import "GPUImageLanczosResamplingFilter.h"
+#import "GPUImageBeautifyFilter.h"
+#import "GDLFilterUtil.h"
 #import <AssetsLibrary/ALAssetsLibrary.h>
 
 @interface GDLViewController ()
@@ -35,12 +38,16 @@
   CGSize viewSize = self.view.frame.size;
   GPUImageView *filteredVideoView = [[GPUImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, viewSize.width, viewSize.height)];
   [self.view addSubview:filteredVideoView];
-
   [_videoCamera addTarget:filteredVideoView];
-  CGSize size = CGSizeMake(720, 1280);
-  GDLRawDataOutput *rawDataOutput = [[GDLRawDataOutput alloc] initWithVideoCamera:_videoCamera withImageSize:size];
-  [_videoCamera addTarget:rawDataOutput];
 
+  CGSize size = CGSizeMake(720, 1280);
+//  GPUImageFilter *filter = [[GPUImageLanczosResamplingFilter alloc] init];
+//  [beautifyFilter addTarget:filter];
+//  [filter forceProcessingAtSizeRespectingAspectRatio:size];
+  GDLRawDataOutput *rtmpOutput = [[GDLRawDataOutput alloc] initWithVideoCamera:_videoCamera withImageSize:size];
+  [_videoCamera addTarget:rtmpOutput];
+
+  // 同时备份视频到本地文件
   NSString *pathToMovie = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Movie.m4v"];
   unlink([pathToMovie UTF8String]); // If a file already exists, AVAssetWriter won't let you record new frames, so delete the old movie
   NSURL *movieURL = [NSURL fileURLWithPath:pathToMovie];
@@ -48,12 +55,19 @@
   movieWriter.encodingLiveVideo = YES;
   [_videoCamera addTarget:movieWriter];
 
+  // 是否开启美颜
+  BOOL useSkinSmoothing = NO;
+  if (useSkinSmoothing) {
+    GPUImageBeautifyFilter *beautifyFilter = [[GPUImageBeautifyFilter alloc] init];
+    [GDLFilterUtil insertFilter:beautifyFilter before:filteredVideoView toChain:_videoCamera];
+  }
+
   [_videoCamera startCameraCapture];
 
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
       _videoCamera.audioEncodingTarget = movieWriter;
       [movieWriter startRecording];
-      [rawDataOutput startUploadStreamWithURL:@"rtmp://a.rtmp.youtube.com/live2" andStreamKey:@"323c-p07x-2g2e-c57k"];
+      [rtmpOutput startUploadStreamWithURL:@"rtmp://a.rtmp.youtube.com/live2" andStreamKey:@"323c-p07x-2g2e-c57k"];
 
       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 120.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
           [_videoCamera removeTarget:movieWriter];

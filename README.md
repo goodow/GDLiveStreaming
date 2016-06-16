@@ -18,7 +18,9 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project:
+  1. Clone the repo, run `git submodule update --init` in the root directory.
+  2. Run `pod install` from the Example directory and open `GDLiveStreaming.xcworkspace` file.
 
 ## Requirements
 
