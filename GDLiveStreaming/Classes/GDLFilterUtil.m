@@ -8,7 +8,7 @@
 
 }
 
-+ (void)insertFilter:(GPUImageOutput <GPUImageInput> *)filter before:(id <GPUImageInput>)before toChain:(GPUImageFilter *)chain {
++ (void)insertFilter:(GPUImageOutput <GPUImageInput> *)filter before:(id <GPUImageInput>)before toChain:(GPUImageOutput *)chain {
   GPUImageOutput *lastOutput = [self findOutputBefore:before from:chain];
   NSArray *inputs = lastOutput.targets;
   [lastOutput removeAllTargets];
@@ -18,7 +18,7 @@
   [lastOutput addTarget:filter];
 }
 
-+ (void)removeFilter:(GPUImageOutput <GPUImageInput> *)filter fromChain:(GPUImageFilter *)chain {
++ (void)removeFilter:(GPUImageOutput <GPUImageInput> *)filter fromChain:(GPUImageOutput *)chain {
   GPUImageOutput *previousFilter = [self findOutputBefore:filter from:chain];
   [previousFilter removeTarget:filter];
   NSArray *targets = filter.targets;

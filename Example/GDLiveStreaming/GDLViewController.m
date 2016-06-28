@@ -40,18 +40,19 @@
   [self.view addSubview:filteredVideoView];
   [_videoCamera addTarget:filteredVideoView];
 
-  CGSize size = CGSizeMake(720, 1280);
-//  GPUImageFilter *filter = [[GPUImageLanczosResamplingFilter alloc] init];
-//  [beautifyFilter addTarget:filter];
-//  [filter forceProcessingAtSizeRespectingAspectRatio:size];
-  GDLRawDataOutput *rtmpOutput = [[GDLRawDataOutput alloc] initWithVideoCamera:_videoCamera withImageSize:size];
-  [_videoCamera addTarget:rtmpOutput];
+  CGSize captureSize = CGSizeMake(16 * 45, 1280);
+  CGSize rtmpSize = CGSizeMake(16 * 23, 640);
+  GPUImageFilter *filter = [[GPUImageLanczosResamplingFilter alloc] init];
+  [filter forceProcessingAtSize:rtmpSize];
+  GDLRawDataOutput *rtmpOutput = [[GDLRawDataOutput alloc] initWithVideoCamera:_videoCamera withImageSize:rtmpSize];
+  [_videoCamera addTarget:filter];
+  [filter addTarget:rtmpOutput];
 
   // 同时备份视频到本地文件
   NSString *pathToMovie = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Movie.m4v"];
   unlink([pathToMovie UTF8String]); // If a file already exists, AVAssetWriter won't let you record new frames, so delete the old movie
   NSURL *movieURL = [NSURL fileURLWithPath:pathToMovie];
-  GPUImageMovieWriter *movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:size];
+  GPUImageMovieWriter *movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:captureSize];
   movieWriter.encodingLiveVideo = YES;
   [_videoCamera addTarget:movieWriter];
 
