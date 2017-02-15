@@ -9,7 +9,7 @@
   },
   "authors": "Rene Rivera",
   "source": {
-    "http": "http://git.code.oa.com/qqplayer/boost/raw/master/boost_1_51_0.tar.gz"
+    "http": "http://127.0.0.1/boost_1_51_0.tar.gz"
   },
   "platforms": {
     "ios": "4.0",
