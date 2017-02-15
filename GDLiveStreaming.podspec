@@ -34,4 +34,7 @@ Pod::Spec.new do |s|
   s.dependency 'GPUImage', '~> 0.1'
   s.dependency 'VideoCore', '~> 0.3'
 
+  s.ios.vendored_libraries = 'lib/libyuv/libyuv.a'
+  s.header_dir = 'lib/libyuv/include'
+
 end
