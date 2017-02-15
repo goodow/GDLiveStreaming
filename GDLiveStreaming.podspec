@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'GDLiveStreaming/Classes/**/*'
+  s.source_files = 'GDLiveStreaming/Classes/**/*', 'lib/libyuv/include/**/*.{h}'
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/boost" }
 
   # s.resource_bundles = {
@@ -33,5 +33,9 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'GPUImage', '~> 0.1'
   s.dependency 'VideoCore', '~> 0.3'
+
+  s.ios.vendored_libraries = 'lib/libyuv/libyuv.a'
+  #s.header_dir = 'lib/libyuv/include'
+  #s.header_mappings_dir = 'lib/libyuv/include'
 
 end
